@@ -117,7 +117,8 @@
 	<button style="background: blue;border-radius:50px;padding:15px;width: 150px;"><a style="color:white; font-size: 30px;text-decoration:none" 	   href="getdata.php">back</a></button>
  </body>
 
- 	<?php   }  // this is session condition end 
+ 	<?php   }  // this is   end of admin session 
+
 
 
  	elseif($_SESSION['usertype']=="user"){
@@ -206,7 +207,7 @@
 		<button style="background: blue;border-radius:50px;padding:15px;width: 150px;"><a style="color:white; font-size: 30px;text-decoration:none"  href="getdata.php">back</a></button>
 
  </body> 
-          <?php }  // this is the end of user update
+          <?php }  // this is the end of user  session
 
 
         elseif($_SESSION['usertype']=="normal"){

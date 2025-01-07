@@ -1,26 +1,28 @@
 <?php
 session_start();
 include("nav.php");
-if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION['usertype']=="normal"){
-?>
-<html>
-<head>
-<title>Course</title>
-<style>
-	.heading{
-			font-size: 20px;
-	}
-</style>
-  </head>
-  <body>
-   <?php include'bg_color.php'; 
-	   $pid = $_GET['id'];
-   include "connection.php";
-   $sql = "SELECT * FROM product WHERE product_id = '$pid' ";	
-	 $result = mysqli_query($conn,$sql) or die ("picture query failed");
-	 if(mysqli_num_rows($result)>0){
-	 		while($row=mysqli_fetch_assoc($result)){
-	 			echo "<h2 style='text-align: center; color: darkblue;'><u>'Unlock Your Potential with <b style='color:red'>{$row['course_title']} </b>'</u> </h2><hr><br>
+if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SESSION['usertype'] == "normal") {
+	?>
+	<html>
+
+	<head>
+		<title>Course</title>
+		<style>
+			.heading {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<?php include 'bg_color.php';
+		$pid = $_GET['id'];
+		include "connection.php";
+		$sql = "SELECT * FROM product WHERE product_id = '$pid' ";
+		$result = mysqli_query($conn, $sql) or die("picture query failed");
+		if (mysqli_num_rows($result) > 0) {
+			while ($row = mysqli_fetch_assoc($result)) {
+				echo "<h2 style='text-align: center; color: darkblue;'><u>'Unlock Your Potential with <b style='color:red'>{$row['course_title']} </b>'</u> </h2><hr><br>
 	 				<ol>
 	 						<li class='heading'>Headline</li><br>
 	 						<ul>
@@ -29,14 +31,15 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 
 	 						<li class='heading'>Course Image </li>
 	 						 <ul>
-	 						 	 "; if($row['p_image']== ''){
-									   echo "<img src='product_logo/1.png' style='width: 100%;  height:600px;border-radius:20px; border: 1px solid black '>"; 
-								}else{
-							  echo "<img src='product_logo/{$row['p_image']}'  style='width: 100%; height:600px; border-radius:20px; border: 1px solid black'/>  
+	 						 	 ";
+				if ($row['p_image'] == '') {
+					echo "<img src='product_logo/1.png' style='width: 100%;  height:600px;border-radius:20px; border: 1px solid black '>";
+				} else {
+					echo "<img src='product_logo/{$row['p_image']}'  style='width: 100%; height:600px; border-radius:20px; border: 1px solid black'/>  
 	 						 </ul><br><hr><br>";
-	 						}
+				}
 
-	 			   echo "
+				echo "
 	 			   		<li class='heading'>Course Description</li><br>
 	 			   		<ul>
 	 			   		 <li>{$row['course_discription']}</li>
@@ -78,22 +81,22 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 	 			  <button style='background:yellow;border-radius: 50px;margin-left:600px;height:80px;border-width:3px;border-color:darkred'><a style='color:darkred;text-decoration: none;font-size:20px' href='buy_course.php?id={$row['product_id']}'>Enroll Now</a></button> 
 	 			  <button style='background:cyan;border-radius: 50px;padding:10px'><a style='color:black;text-decoration:none';	href='getdata.php'>back</a></button>";
 
-	 		}
-	 	}
-   ?> 
+			}
+		}
+		?>
 
-   </body>
-   <?php
-  include'footer.php';
-   ?>
- 
- 
-</html>
+	</body>
+	<?php
+	include 'footer.php';
+	?>
+
+
+	</html>
 
 <?php }   // end of user and normal and admin 
-      else{
-      	 header("Location: signup.php");
-      }
+else {
+	header("Location: signup.php");
+}
 
 
 ?>

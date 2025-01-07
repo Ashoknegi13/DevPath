@@ -17,7 +17,7 @@ if(mysqli_num_rows($result)>0){
                   				  
                   					
                               <td><b>Total Prise</b></td>
-	 			            <td><input type='number' value='{$total_prise}'  readonly	></td>";
+	 			            <td><input type='number' value='{$total_prise}' name='total_prise' readonly	></td>";
 				}
 				 
 				mysqli_close($conn);

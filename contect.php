@@ -1,5 +1,5 @@
 <?php
-include'bg_color.php';
+include 'bg_color.php';
     session_start();
 	if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION['usertype']=="normal" )
 	{
@@ -14,7 +14,6 @@ include'bg_color.php';
 		<title>About us</title>
 		<style>
 			body{
-
 				margin: 0;
 				padding: 0;
 				box-sizing: border-box;
