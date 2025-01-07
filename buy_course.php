@@ -45,7 +45,7 @@
 	 <h2 style="text-align: center; color:white;font-size: 50px;"><u>Fill Details</u></h2>
 	 <form action="thankyou.php" method="POST">
 	 	<table id="box">
-
+ 
 	 		 <tr>
 	 		 	<td>
 	 		 		<input type="hidden" name="product_id" value="<?php echo $pid; ?>">
