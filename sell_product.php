@@ -6,7 +6,11 @@
 <html>
 <title>All Selling Product</title>
    <style>
-   	 
+   	 table{
+		text-align: center;
+		width: 100%;
+		margin-bottom: 40px;
+	 }
    	button{
    		border-radius: 50px;
    	}
@@ -82,7 +86,7 @@
 				<td><?php echo $row['quantity']; ?></td>
 				
 				 
-				<td><button style="background:red;"><a style="color: white; text-decoration: none;" href="delete_buyer.php?id=<?php echo $row['id']; ?>">delete</a></button></td>
+				<td><button style="background:red;width:100%"><a style="color: white; text-decoration: none;" href="delete_buyer.php?id=<?php echo $row['id']; ?>">delete</a></button></td>
 			
 			</tr>
 			<?php
@@ -100,9 +104,9 @@
 			  echo '<ul style=" margin-left:550px; list-style-type: none;">';
 			   if($page>1){
 			   	     $first_page=1;
-					echo '<button style="background:cyan"><li><a style="text-decoration:none;" href="sell_product.php?page='.($page-1).'  ">Pre</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a style="text-decoration:none;" href="sell_product.php?page='.($page-1).'  ">Pre</a></li></button>';
 					
-			    		echo '<button style="background:cyan"><li ><a  style="text-decoration:none;" href="sell_product.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:50px;height:20px"><li ><a  style="text-decoration:none;" href="sell_product.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
 			    		 echo "<b>....</b>";
 						}
 						
@@ -114,18 +118,18 @@
 						   }
 
 						   if($i==$page AND $i<=$total_page){ for($j=$i;$j<$i+1;$j++)
-						   { echo '<button  class="active" style="background:blue"><li ><a style="color:white;text-decoration:none" href="sell_product.php?page='.$j.' ">'.$j.'</a></li></button>';
+						   { echo '<button  class="active" style="background:blue;width:50px;height:20px"><li ><a style="color:white;text-decoration:none" href="sell_product.php?page='.$j.' ">'.$j.'</a></li></button>';
 						   	 } }
 
 			   }
 			    if($page<$total_page){
 
 			    	  echo "<b>....</b>";
-			    		echo '<button style="background:cyan"><li ><a style="text-decoration:none;" href="sell_product.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:50px;height:20px"><li ><a style="text-decoration:none;" href="sell_product.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
 			    		if($page==$total_page){
 					echo '';
 				}else{
-					echo '<button style="background:cyan"><li><a style="text-decoration:none;" href="sell_product.php?page='.($page+1).'  ">Next</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a style="text-decoration:none;" href="sell_product.php?page='.($page+1).'  ">Next</a></li></button>';
 				}
 						}
 
@@ -133,7 +137,7 @@
 		}
 		?>
 
-		<br><button  style="background: cyan; border-radius:50px; margin-bottom: 200PX	;" ><a style="color:black; text-decoration:none" href=" getdata.php">Go back</a></button>
+		<br><button  style="background: cyan; border-radius:50px; margin-bottom: 200PX;width:100px;height:50px" ><a style="color:black; text-decoration:none" href=" getdata.php">Go back</a></button>
 	<?php
 
 	 include 'footer.php';
@@ -161,7 +165,7 @@
 				<th>Date </th>
 				<th style="width:150px;">State</th>
 				<th>Buying Quantity</th>
-				<th style="width:100px;">edit</th>
+				<th>delete</th>
 			</tr>
 
 			<?php
@@ -202,7 +206,7 @@
 				<td><?php echo $row['date']; ?></td>
 				<td><?php echo $row['state']; ?></td>
 			   <td><?php echo $row['quantity']; ?></td>
-		<td><button  style=" background: green;"><a  style=" text-decoration: none; color:  white; " href="edit_buyer.php?id=<?php echo $row['id']; ?>">edit</a></button></td>	
+			   <td><button style="background:red;width:100%"><a style="color: white; text-decoration: none;" href="delete_buyer.php?id=<?php echo $row['id']; ?>">delete</a></button></td>
 			</tr>
 			<?php
 			}
@@ -219,9 +223,9 @@
 			  echo '<ul style=" margin-left:500px; list-style-type: none;">';
 			   if($page>1){
 			   	     $first_page=1;
-					echo '<button  style="background:cyan "><li><a  style=" text-decoration: none; color:black; " href="sell_product.php?page='.($page-1).'  ">Pre</a></li></button>';
+					echo '<button  style="background:cyan;width:60px;height:30px"><li><a  style=" text-decoration: none; color:black; " href="sell_product.php?page='.($page-1).'  ">Pre</a></li></button>';
 					
-			    		echo '<button style="background:cyan"><li ><a style=" text-decoration: none; color:black; " href="sell_product.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:50px;height:20px"><li ><a style=" text-decoration: none; color:black; " href="sell_product.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
 			    		 echo "<b>....</b>";
 						}
 						
@@ -233,18 +237,18 @@
 						   }
 
 						   if($i==$page AND $i<=$total_page){ for($j=$i;$j<$i+1;$j++)
-						   { echo '<button style="background:blue"><li ><a style="text-decoration:none;	color:white" href="sell_product.php?page='.$j.' ">'.$j.'</a></li></button>';
+						   { echo '<button style="background:blue;width:50px;height:20px"><li ><a style="text-decoration:none;	color:white" href="sell_product.php?page='.$j.' ">'.$j.'</a></li></button>';
 						   	 } }
 
 			   }
 			    if($page<$total_page){
 
 			    	  echo "<b>....</b>";
-			    		echo '<button style="background:cyan"><li ><a style=" text-decoration: none; color:black; " href="sell_product.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:50px;height:20px"><li ><a style=" text-decoration: none; color:black; " href="sell_product.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
 			    		if($page==$total_page){
 					echo '';
 				}else{
-					echo '<button style="background:cyan"><li><a style=" text-decoration: none; color:black;" href="sell_product.php?page='.($page+1).'  ">Next</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a style=" text-decoration: none; color:black;" href="sell_product.php?page='.($page+1).'  ">Next</a></li></button>';
 				}
 						}
 
@@ -252,7 +256,7 @@
 		}
 		?>
 
-	<br><button  style="background: cyan; border-radius:50px" ><a style="color:black; text-decoration:none" href=" getdata.php">Go back</a></button>
+	<br><button  style="background: cyan; border-radius:50px;width:100px;height:50px" ><a style="color:black; text-decoration:none" href=" getdata.php">Go back</a></button>
 	<?php
      include 'footer.php';
 
@@ -339,27 +343,27 @@
 			  echo '<ul style=" margin-left:400px; list-style-type: none;">';
 			   if($page>1){
 			   	     $first_page=1;
-					echo '<button style="background:cyan"><li><a style="text-decoration:none;color:black" href="sell_product.php?page='.($page-1).'  ">Pre</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a style="text-decoration:none;color:black" href="sell_product.php?page='.($page-1).'  ">Pre</a></li></button>';
 					
-			    		echo '<button style="background:cyan"><li ><a  style="text-decoration:none;color:black" href="sell_product.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:50px;height:20px"><li ><a  style="text-decoration:none;color:black" href="sell_product.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
 			    		 echo "<b>....</b>";
 						}
 						
 			   for($i=1;$i<=$total_page;$i++){
 			    
 						   if($i==$page AND $i<=$total_page){ for($j=$i;$j<$i+1;$j++)
-						   { echo '<button style="background:blue"><li ><a style="color:white;text-decoration:none" href="sell_product.php?page='.$j.' ">'.$j.'</a></li></button>';
+						   { echo '<button style="background:blue;width:50px;height:20px"><li ><a style="color:white;text-decoration:none" href="sell_product.php?page='.$j.' ">'.$j.'</a></li></button>';
 						   	 } }
 
 			   }
 			    if($page<$total_page){
 
 			    	  echo "<b>....</b>";
-			    		echo '<button style="background:cyan"><li ><a style="text-decoration:none;color:black"  href="sell_product.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:50px;height:20px"><li ><a style="text-decoration:none;color:black"  href="sell_product.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
 			    		if($page==$total_page){
 					echo '';
 				}else{
-					echo '<button style="background:cyan"><li><a style="text-decoration:none;color:black"  href="sell_product.php?page='.($page+1).'  ">Next</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a style="text-decoration:none;color:black"  href="sell_product.php?page='.($page+1).'  ">Next</a></li></button>';
 				}
 						}
 
@@ -367,7 +371,7 @@
 		}
 		?>
 
-		<br><button  style="background: cyan; border-radius:50px" ><a style="color:black; text-decoration:none" href=" getdata.php">Go back</a></button>
+		<br><button  style="background: cyan; border-radius:50px;width:100px;height:50px" ><a style="color:black; text-decoration:none" href=" getdata.php">Go back</a></button>
 	<?php
   include 'footer.php';
 

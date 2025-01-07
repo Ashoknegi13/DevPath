@@ -8,7 +8,7 @@ $cnt = 0;
 $output = "";
 if (mysqli_num_rows($result) > 0) {
 
-	$output .= "<table border='1px solid black' cellpadding='5px' cellspacing='0px' style='margin-left:200px;margin-bottom:400px' ><tr style='background-color: blueviolet; color: white;'>
+	$output .= "<table border='1px solid black' cellpadding='5px' cellspacing='0px' style='margin-left:200px;margin-bottom:200px' ><tr style='background-color: blueviolet; color: white;'>
 			 	 
 				<th>Sr. number</th>
 				<th style='width:100px;'>User Id</th>

@@ -216,15 +216,9 @@
 					echo ' </ul>';
 				}
 		?>
-		 		 
-		
-  
+		 		
 
-
-
-  <br><br><h3 align="center" style="color:white;"> "Success Starts Here - Choose a Course and Get Started!" </h3>
-
-		 
+  <br><br><h3 align="center" style="color:white;"> "Success Starts Here - Choose a Course and Get Started!" </h3>	 
 		<table border="1px solid black" cellpadding="5px" cellspacing="0px" style="margin-left:200px;">
 				<tr>
 					<th>Sr no.</th>
@@ -544,7 +538,7 @@ width: 1300px;
 				<tr>
 					<th style="width:100px;">ID</th>
 					<th style="width:200px;">Course Title</th>
-			    <th>Full Description</th>
+			         <th>Full Description</th>
 					<th style="width:100px;"> edit</th>
 					<th style="width:100px;">Buy</th>
 					<th style="width:200px;">Add to Cart</th>
@@ -560,7 +554,7 @@ width: 1300px;
 				<tr>
 					 <td><?php echo $row['product_id']; ?></td>
 					 <td><?php echo $row['course_title']; ?></td>
-					  <td><a href="course.php?id=<?php echo $row['product_id']; ?>">Click here</a></td>
+					  <td><a style="color:white" href="course.php?id=<?php echo $row['product_id']; ?>">Click here</a></td>
 				<td><button style="background:  green;width: 70px;"><a style="text-decoration:none;color: white;" href="edit_product.php?id=<?php echo $row['product_id']; ?>">edit</a></button></td>
 				<td><button style="background: blue;width: 70px;"><a style="text-decoration:none;color: white;" href="buy_course.php?id=<?php echo $row['product_id']; ?>">Buy</a></button></td>
 			
@@ -815,8 +809,6 @@ width: 1300px;
 		 		 
  
 		<br><br><h3 align="center" style="color:white;"> "Success Starts Here - Choose a Course and Get Started!" </h3>
-
-		 
 		<table border="1px solid black" cellpadding="5px" cellspacing="0px" style="margin-left: 250px;">
 				<tr>
 					<th style="width:100px;">ID</th>
@@ -837,7 +829,7 @@ width: 1300px;
 				<tr>
 					 <td><?php echo $row['product_id']; ?></td>
 					 <td><?php echo $row['course_title']; ?></td>
-					  <td><a href="course.php?id=<?php echo $row['product_id']; ?>">Click here</a></td>
+					  <td><a style="color:white" href="course.php?id=<?php echo $row['product_id']; ?>">Click here</a></td>
 				<td><button style="background:green;width: 80px;"><a style="text-decoration: none;color:white"  href="buy_course.php?id=<?php echo $row['product_id']; ?>">Buy</a></button></td>
 			
 				  <td>

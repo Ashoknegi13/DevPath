@@ -1,4 +1,28 @@
+ <?php
+ // data came from thankyou.php file
+     $product_id =  $_POST['product_id'];
+     $uid =  $_POST['uid'];
+     $b_name =  $_POST['b_name'];
+     $b_email =  $_POST['b_email'];
+     $b_phone =  $_POST['b_phone'];
+     $date =  $_POST['date'];
+     $b_age =  $_POST['b_age'];
+     $b_state =  $_POST['b_state'];
+     $quantity =  $_POST['quantity'];
  
+
+include('connection.php');
+
+  $sql = "INSERT INTO buyer (product_id,user_id,name,email,phone,age,date,state,quantity) VALUES ('$product_id','$uid','$b_name','$b_email','$b_phone','$b_age','$date','$b_state','$quantity')  ";
+ $result = mysqli_query($conn,$sql) or die("insert Buyer detail query failed");
+ if( $result){
+    echo "";
+ }else{
+    echo "<script>alert('query field of insert buyer details')</script>";
+    header("Location: getdata.php");
+}
+
+ ?>
  
 <!DOCTYPE html>
 <html lang="en">
@@ -110,5 +134,6 @@
         const successSound = document.getElementById('successSound');
         successSound.play();
     </script>
+    
 </body>
 </html>

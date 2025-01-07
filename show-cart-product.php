@@ -19,7 +19,7 @@
 		#modal{
 		 background:  TAN; 
 		 position: fixed;
-		 margin-left:790px;
+		 margin-left:52%;
 		 margin-top:65px;
 		width: 340px;
 		height:  500px;
@@ -93,12 +93,11 @@
 
 		<table id="main">
 			<tr>
-		       <td><h1 style="margin-left: 300px;"> Your cart products </h1></td>
+		       <td><h1 style="margin-left: 50%;"> Your cart products </h1></td>
 			</tr>
 			<tr>
 				<td id="load-table">
  
-					
 				</td>
 			</tr>
 		</table>
