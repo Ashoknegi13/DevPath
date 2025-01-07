@@ -73,10 +73,6 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 	 			   		 <li>{$row['duration']}</li>
 	 			   		</ul><br><hr><br>
 
-	 			   		<li  class='heading'>Certification  </li><br>
-	 			   		<ul>
-	 			   		 <li>{$row['certification']}</li>
-	 			   		</ul><br><hr><br>
 
 	 			   </ol>
 	 			  <button style='background:yellow;border-radius: 50px;margin-left:600px;height:80px;border-width:3px;border-color:darkred'><a style='color:darkred;text-decoration: none;font-size:20px' href='buy_course.php?id={$row['product_id']}'>Enroll Now</a></button> 
