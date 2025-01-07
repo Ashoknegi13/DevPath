@@ -1,5 +1,4 @@
  <?php
-
      include 'connection.php';
  $pid = $_POST['id'];
  $uid =  $_POST['uid'];
