@@ -17,7 +17,8 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 		#box {
 			border: 2px solid slateblue;
 			/*				background-color: tan;*/
-			background-color: gray;
+			background:  linear-gradient(135deg, #1d2671, #c33764);
+			color : #fff;
 			padding: 10px;
 			margin-left: 400px;
 			text-align: center;
@@ -86,7 +87,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 							</td>
 							<td>
 						</tr>
-
+ 
 						<tr>
 							<td>
 								<label>Email :</label>
@@ -160,8 +161,8 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 				?>
 			</table>
 		</form>
-		<button style="background: cyan; border-radius:50px;width:200px;height:30px"><a
-				style="color:black; text-decoration:none" href="getdata.php">Home Page</a></button>
+		<button style="background: cyan; border-radius:50px;width:200px;height:30px">
+			<a style='color:black; text-decoration:none' href='course.php?id=<?php echo  $pid;?> '>Back</a></button>
 
 		<script src="js/jquery.js"></script>
 		<script>
@@ -205,3 +206,5 @@ else {
 	session_destroy();
 	header("Location: signup.php");
 }
+
+?>

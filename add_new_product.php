@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("nav.php");
+   
  
 if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 	?>
@@ -9,11 +10,16 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 	<head>
 		<title>Add New Product</title>
 		<style>
-			bodY{
+			body{ 
 				background-image: url('upload-image/2.jpg');
-		    	background-size: cover;
+		    	background-size: cover;	
+				color : #fff;
+				
+				
 			}
 			#box {
+				background:  linear-gradient(135deg, #1d2671, #c33764);
+		
 				border: 2px solid slateblue;
 				padding: 10px;
 				margin-left: 24%;
@@ -40,7 +46,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 	</head>
 
 	<body>
-		<?php include 'bg_color.php'; ?>
+		
 		<h2> Add new prdouct</h2>
 		<form action="add_new_product_in_db.php" method="POST" enctype="multipart/form-data" autocomplete="off">
 			<table id="box">
@@ -133,8 +139,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 			</table>
 		</form>
 
-		<button style="background: cyan; border-radius:50px"><a style="text-decoration: none;color: black;"
-				href="getdata.php">Home page</a></button>
+		<button style="background: blue; border-radius:50px;width:200px;height:40px;"><a style="text-decoration: none;color:  white; font-size:20px" href="getdata.php">Back</a></button>
 	</body>
 
 	</html>

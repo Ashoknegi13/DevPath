@@ -47,7 +47,7 @@ $yid = $_POST['yid'];
    }
 
 }
-
+ 
  
 if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION['usertype']=="normal"){
 ?>
@@ -63,19 +63,20 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 				font-family: arial;
 				background-image: url('upload-image/2.jpg');
 		    	background-size: cover;
-			    opacity: 0.8;
+				color : #fff;
+				
 			 
 			}
 	  	#box{
 				border: 2px solid  slateblue;
-/*				background-color: tan;*/
-                 background-color:  gray;
+            background:  linear-gradient(135deg, #1d2671, #c33764);
 				padding: 10px;
-				margin-left:450px;
+				margin-left: 24%;
+				width: 50%;
 				text-align: center;
 				margin-top: 70px;
 				border-radius: 50px;
-				height: 400px;
+				height: 100%;
 
 			}
 			#box input{
@@ -91,7 +92,7 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 			}
 	  </style>
 </head>
-<body>
+<body>  <h1><U>UPDATE YOUR PROFILE</U></h1>
 		<form action="" method="POST" enctype="multipart/form-data">
 			<table id="box">
 				<?php

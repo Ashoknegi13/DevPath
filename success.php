@@ -1,19 +1,5 @@
-<?php
-// File download handling
-if (isset($_GET['download'])) {
-    $filePath = 'course_materials.zip'; // Path to the downloadable course file
-    if (file_exists($filePath)) {
-        header('Content-Type: application/zip');
-        header('Content-Disposition: attachment; filename="' . basename($filePath) . '"');
-        header('Content-Length: ' . filesize($filePath));
-        readfile($filePath);
-        exit;
-    } else {
-        echo "<script>alert('File not found.');</script>";
-    }
-}
-?>
-
+ 
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>

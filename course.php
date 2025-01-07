@@ -22,7 +22,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 		$result = mysqli_query($conn, $sql) or die("picture query failed");
 		if (mysqli_num_rows($result) > 0) {
 			while ($row = mysqli_fetch_assoc($result)) {
-				echo "<h2 style='text-align: center; color: darkblue;'><u>'Unlock Your Potential with <b style='color:red'>{$row['course_title']} </b>'</u> </h2><hr><br>
+				echo "<h2 style='text-align: center; color: white;'><u>'Unlock Your Potential with <b style='color:red'>{$row['course_title']} </b>'</u> </h2><hr><br>
 	 				<ol>
 	 						<li class='heading'>Headline</li><br>
 	 						<ul>
@@ -78,8 +78,9 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 
 
 	 			   </ol>
-	 			  <button style='background:yellow;border-radius: 50px;margin-left:600px;height:80px;border-width:3px;border-color:darkred'><a style='color:darkred;text-decoration: none;font-size:20px' href='buy_course.php?id={$row['product_id']}'>Enroll Now</a></button> 
-	 			  <button style='background:cyan;border-radius: 50px;padding:10px'><a style='color:black;text-decoration:none';	href='getdata.php'>back</a></button>";
+				<button style='background:cyan;border-radius: 50px;padding:10px;width:10%'><a style='color:black;text-decoration:none';	href='getdata.php'>back</a></button>
+				   <button style=' background-color: green;border-radius: 50px;margin-left:35%;height:80px;border-width:3px;border-color:darkred'><a style='color:white;text-decoration: none;font-size:20px' href='buy_course.php?id={$row['product_id']}'>Enroll Now</a></button>"; 
+	 			  
 
 			}
 		}

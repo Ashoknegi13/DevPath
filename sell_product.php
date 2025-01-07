@@ -11,7 +11,7 @@
    		border-radius: 50px;
    	}
    	th{
-				background-color:  saddlebrown;
+		background-color: blueviolet;
 				color: white;
 			}
    </style>

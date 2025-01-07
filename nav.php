@@ -10,12 +10,7 @@
 
 		.navbar ul {
 			background: #3e1d71; /* A complementary dark purple */
-color: #ffffff; /* White text for readability */
-
-
-
-
-
+               color: #ffffff; /* White text for readability */
 
 			 
 			/*			        background-color: darkorange;*/
