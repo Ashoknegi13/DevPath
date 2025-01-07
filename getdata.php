@@ -809,6 +809,8 @@ width: 1300px;
 		 		 
  
 		<br><br><h3 align="center" style="color:white;"> "Success Starts Here - Choose a Course and Get Started!" </h3>
+
+		 
 		<table border="1px solid black" cellpadding="5px" cellspacing="0px" style="margin-left: 250px;">
 				<tr>
 					<th style="width:100px;">ID</th>

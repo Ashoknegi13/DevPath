@@ -33,9 +33,9 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 	 						 <ul>
 	 						 	 ";
 				if ($row['p_image'] == '') {
-					echo "<img src='product_logo/1.png' style='width: 100%;  height:600px;border-radius:20px; border: 1px solid black '>";
+					echo "<img src='product_logo/1.png' style='width: 70%;  height:600px;border-radius:20px; border: 1px solid black '>";
 				} else {
-					echo "<img src='product_logo/{$row['p_image']}'  style='width: 100%; height:600px; border-radius:20px; border: 1px solid black'/>  
+					echo "<img src='product_logo/{$row['p_image']}'  style='width: 70%; height:600px; border-radius:20px; border: 1px solid black'/>  
 	 						 </ul><br><hr><br>";
 				}
 
