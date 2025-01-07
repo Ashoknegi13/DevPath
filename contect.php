@@ -45,12 +45,12 @@ include 'bg_color.php';
 			h2{
 				margin-bottom: 20px;
 				font-size:2em ;
-				color: #333;
+				 
 			}
 			p{
 				margin-bottom: 20px;
 				font-size:1.1em ;
-				color: #333;
+			 
 			}
 			ul{
 				margin-bottom: 20px;
@@ -59,12 +59,9 @@ include 'bg_color.php';
 			li{
 				 
 				font-size:1.1em ;
-				color: blue;
-			}
-			li strong{
 			 
-				color: #333;
 			}
+			 
 		</style>
 	</head>
 

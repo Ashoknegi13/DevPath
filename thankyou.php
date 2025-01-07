@@ -13,7 +13,7 @@ echo $money = 1;
 
  ?>
   
-  <form action="" method="POST">
+  <form action="success.php" method="POST">
 <script
    src="https://checkout.razorpay.com/v1/checkout.js"
     data-key="<?php echo $api_key ;?>" // Enter the Test API Key ID generated from Dashboard → Settings → API Keys

@@ -107,6 +107,15 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 
 						<tr>
 							<td>
+								<label> date :</label>
+							</td>
+							<td>
+							<input type="date" id="date" name="date" value="<?php echo date('Y-m-d'); ?>" readonly>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
 								<label>Age : </label>
 							</td>
 							<td>

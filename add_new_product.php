@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("nav.php");
+ 
 if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 	?>
 	<html>
@@ -8,27 +9,27 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 	<head>
 		<title>Add New Product</title>
 		<style>
+			bodY{
+				background-image: url('upload-image/2.jpg');
+		    	background-size: cover;
+			}
 			#box {
 				border: 2px solid slateblue;
-				/*				background-color: tan;*/
-				background-color: gray;
 				padding: 10px;
-				margin-left: 480px;
+				margin-left: 24%;
+				width: 50%;
 				text-align: center;
-				margin-top: 70px;
+				margin-top: 50px;
 				border-radius: 50px;
-				height: 500px;
+				height: 100%;
 			}
 
 			#box input {
 				border-radius: 50px;
 				margin: 2px;
-
 			}
 
-			h1,
-			h2,
-			h3 {
+			h1,h2,h3 {
 				text-align: center;
 			}
 

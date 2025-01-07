@@ -4,8 +4,9 @@
 	 footer{
 /*	 	background-color:  saddlebrown;*/
 margin-top: 50px;
-            background-color: gray;
-	 	color:    white;
+background: #3e1d71; /* A complementary dark purple */
+color: #ffffff; /* White text for readability */
+
 	 	padding: 20px 0;
 	 	text-align: center;
 	 	font-family: arial;
