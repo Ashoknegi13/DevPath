@@ -319,9 +319,6 @@ if ($_SESSION['usertype'] == "admin") {
 
 
 
-
-
-
 	<script src="js/jquery.js"></script>
 	<script>
 		$(document).ready(function () {
