@@ -11,7 +11,7 @@ $buyer_state = $_POST['b_state'];
 $buyer_quentity = $_POST['quantity'];
 $total_prise = $_POST['total_prise'];
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
