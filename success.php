@@ -1,29 +1,29 @@
- <?php
- // data came from thankyou.php file
-     $product_id =  $_POST['product_id'];
-     $uid =  $_POST['uid'];
-     $b_name =  $_POST['b_name'];
-     $b_email =  $_POST['b_email'];
-     $b_phone =  $_POST['b_phone'];
-     $date =  $_POST['date'];
-     $b_age =  $_POST['b_age'];
-     $b_state =  $_POST['b_state'];
-     $quantity =  $_POST['quantity'];
- 
+<?php
+session_start();
+// Data came from the previous page (thankyou.php)
+$product_id = $_POST['product_id'];
+$uid = $_POST['uid'];
+$b_name = $_POST['b_name'];
+$b_email = $_POST['b_email'];
+$b_phone = $_POST['b_phone'];
+$date = $_POST['date'];
+$b_age = $_POST['b_age'];
+$b_state = $_POST['b_state'];
+$quantity = $_POST['quantity'];
 
 include('connection.php');
+$sql = "INSERT INTO buyer (product_id, user_id, name, email, phone, age, date, state, quantity) 
+        VALUES ('$product_id', '$uid', '$b_name', '$b_email', '$b_phone', '$b_age', '$date', '$b_state', '$quantity')";
+$result = mysqli_query($conn, $sql) or die("Insert buyer detail query failed");
 
-  $sql = "INSERT INTO buyer (product_id,user_id,name,email,phone,age,date,state,quantity) VALUES ('$product_id','$uid','$b_name','$b_email','$b_phone','$b_age','$date','$b_state','$quantity')  ";
- $result = mysqli_query($conn,$sql) or die("insert Buyer detail query failed");
- if( $result){
+if ($result) {
     echo "";
- }else{
-    echo "<script>alert('query field of insert buyer details')</script>";
+} else {
+    echo "<script>alert('Query failed to insert buyer details');</script>";
     header("Location: getdata.php");
 }
+?>
 
- ?>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,17 +103,29 @@ include('connection.php');
     </style>
 </head>
 <body>
-    <!-- Success Sound -->
-    <audio id="successSound" autoplay>
-        <source src="success.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+
+     
 
     <!-- Thank You Content -->
     <div class="container">
         <h1>Payment Successful!</h1>
         <p>Thank you for choosing DevPath! Start your journey and unlock your potential.</p>
-        <a href="?download=1" class="btn">Download Your Course</a>
+        
+        <!-- Download Button -->
+        <?php
+        if ($product_id == 1) {
+            echo "<a href='https://drive.google.com/file/d/1RNeiThz1FHUJBvCFV_2rVQ3bEmD7ZMyk/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download Web Development Course</a>";
+        } elseif ($product_id == 2) {
+            echo "<a href='https://drive.google.com/file/d/1RS8sVjuaRQY9qGmfd03qJUK1ON6rfsZR/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download Java Course</a>";
+        } elseif ($product_id == 3) {
+            echo "<a href='https://drive.google.com/file/d/1RS8sVjuaRQY9qGmfd03qJUK1ON6rfsZR/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download C language Course</a>";
+        } elseif ($product_id == 4) {
+            echo "<a href='https://drive.google.com/file/d/1RXEbyVW8HM4cRsc_Ti6n1gOLL61Ofoss/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download PHP Course</a>";
+        } else {
+            echo "<a href='getdata.php' class='btn'>No Course Available (Go to Home Page)</a>";
+        }
+        ?>
+
     </div>
 
     <!-- Dollar Animation -->
@@ -130,10 +142,28 @@ include('connection.php');
             document.body.appendChild(dollar);
         }
 
-        // Play success sound
-        const successSound = document.getElementById('successSound');
-        successSound.play();
+       
     </script>
-    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // When the download button is clicked, open PDF and redirect
+            $('#downloadBtn').click(function (e) {
+                // Open the PDF in a new tab
+                var pdfWindow = window.open($(this).attr('href'), '_blank');
+                
+                // After the user closes the PDF window, redirect to getdata.php
+                var checkPDFClosed = setInterval(function () {
+                    if (pdfWindow.closed) {
+                        // Redirect to getdata.php
+                        window.location.href = 'getdata.php';
+                        clearInterval(checkPDFClosed);
+                    }
+                }, 1000); // Check every second
+                return false; // Prevent default link behavior
+            });
+        });
+    </script>
 </body>
 </html>

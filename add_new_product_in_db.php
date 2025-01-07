@@ -13,12 +13,12 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 	$duration 				= $_POST['duration'];
 	$prise				    = $_POST['prise'];
 	$course_meterials	    = $_POST['course_meterials'];
-	$certification          = $_POST['certification'];
+	// $certification          = $_POST['certification'];
 	$img_name               = $_FILES['image']['name'];
 	$tmp_name               = $_FILES['image']['tmp_name'];
 	$folder                 = "product_logo/" . $img_name;
 
-	$sql = "INSERT INTO product(product_id,course_title,course_discription,level,prerequisites,course_content,duration,prise,course_meterials,certification,p_image) VALUES('$product_id','$course_title','$course_discription','$level','$prerequisites','$course_content','$duration','$prise','$course_meterials','$certification','$img_name') ";
+	$sql = "INSERT INTO product(product_id,course_title,course_discription,level,prerequisites,course_content,duration,prise,course_meterials,p_image) VALUES('$product_id','$course_title','$course_discription','$level','$prerequisites','$course_content','$duration','$prise','$course_meterials','$img_name') ";
 	$result = mysqli_query($conn, $sql) or die("Query failed");
 	if ($result) {
 		move_uploaded_file($tmp_name, $folder);

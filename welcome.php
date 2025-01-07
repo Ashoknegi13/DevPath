@@ -11,19 +11,20 @@ include 'nav.php';
 			background-image: url('upload-image/2.jpg');
 			background-size: cover;
 			font-family: arial;
+			color : #fff;
 
 		}
 
 		#box {
+			background:  linear-gradient(135deg, #1d2671, #c33764);
 			border: 2px solid black;
-			background-color: gray;
 			border-radius: 20px;
 			height: 400px;
 			width: 400px;
 			margin: 30px;
 			padding: 40px;
 			text-align: center;
-			opacity: 0.7;
+			 
 
 		}
 
@@ -46,7 +47,7 @@ include 'nav.php';
 		h3,
 		h4 {
 			text-align: center;
-			color: white;
+			 
 		}
 	</style>
 </head>

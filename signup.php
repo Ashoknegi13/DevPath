@@ -54,18 +54,18 @@
 				font-family: arial;
 				background-image: url('upload-image/bg.jpg');
 				background-size: cover;
-				color: white;
+				color : #fff;
 			} 
 		   #box{
 				border: 2px solid  white;
-  	            background-color: darkgray;
+  	          background:  linear-gradient(135deg, #1d2671, #c33764);
 				padding: 20px;
 				margin: 5px;
 				text-align: center;
 				margin-top: 20px;
 				border-radius: 50px;
 				height: 500px;
-				opacity: 0.9;
+				 
 			}
 			#box input{
 				border-radius: 50px;
@@ -77,7 +77,7 @@
 			}
 			#box label{
 				font-size: 20px;
-				color: darkblue;
+			 
 			} 
 	</style>
 			

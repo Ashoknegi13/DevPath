@@ -1,7 +1,7 @@
 <?php
 session_start();
 include'nav.php';
-
+include 'bg_color.php';
 if(isset($_POST['btn'])){
 
  
@@ -60,12 +60,9 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 	<title>Profile</title>
 	   <style>
 	  	body{
-				font-family: arial;
-				background-image: url('upload-image/2.jpg');
+			 
 		    	background-size: cover;
 				color : #fff;
-				
-			 
 			}
 	  	#box{
 				border: 2px solid  slateblue;

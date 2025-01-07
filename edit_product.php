@@ -8,14 +8,17 @@ if ($_SESSION['usertype'] == "admin") {
 
 	<head>
 		<style>
+			body{
+				font-family: arial;
+				color : #fff;
+			}
 			#box {
-				border: 2px solid slateblue;
-				/*				background-color: tan;*/
-				background-color: gray;
+				background:  linear-gradient(135deg, #1d2671, #c33764);
 				padding: 10px;
-				margin-left: 400px;
+				width: 50%;
+				margin-left: 23%;
 				text-align: center;
-				margin-top: 40px;
+				margin-top: 3%;
 				border-radius: 50px;
 				height: 600px;
 			}
@@ -39,7 +42,7 @@ if ($_SESSION['usertype'] == "admin") {
 		</style>
 	</head>
 	<?php include 'bg_color.php'; ?>
-	<h2> Update This prdouct!!!</h2>
+	<h2> Update This prdouct!!!</h2> 
 	<form action="update_product.php" method="POST" enctype="multipart/form-data">
 		<table id="box">
 			<?php
@@ -131,14 +134,7 @@ if ($_SESSION['usertype'] == "admin") {
 						</td>
 					</tr>
 
-					<tr>
-						<td><label for="">Certification :</label></td>
-						<td><select name="certification" required>
-								<option><?php echo $row['certification']; ?></option>
-								<option>Yes</option>
-								<option>No</option>
-							</select></td>
-					</tr>
+				 
 
 					<tr>
 						<td>Change Logo</td>
@@ -148,7 +144,7 @@ if ($_SESSION['usertype'] == "admin") {
 					<tr>
 						<td>
 							<button name="update_newbtn"
-								style="background: green; color:white; border-radius: 50px;width: 100px;">Update</button>
+								style="background: green; color:white; border-radius: 50px;width: 60%;">Update</button>
 						</td>
 					</tr>
 					<?php
@@ -157,7 +153,7 @@ if ($_SESSION['usertype'] == "admin") {
 			?>
 		</table>
 	</form>
-	<button style="background: cyan; border-radius:50px"><a style="color:black; text-decoration:none"
+	<button style="background: cyan; border-radius:50px;height:5%"><a style="color:black;font-size:20px; text-decoration:none"
 			href="getdata.php">back</a></button>
 
 	</html>
@@ -171,14 +167,20 @@ elseif ($_SESSION['usertype'] == "user") {
 
 	<head>
 		<style>
+			body{
+				font-family: arial;
+				background-image: url('upload-image/2.jpg');
+		    	background-size: cover;
+				color : #fff;
+			}
 			#box {
-				border: 2px solid slateblue;
-				/*				background-color: tan;*/
+				background:  linear-gradient(135deg, #1d2671, #c33764);
 				background-color: gray;
 				padding: 10px;
-				margin-left: 400px;
+				width: 50%;
+				margin-left: 23%;
 				text-align: center;
-				margin-top: 40px;
+				margin-top: 3%;
 				border-radius: 50px;
 				height: 600px;
 			}
@@ -287,20 +289,13 @@ elseif ($_SESSION['usertype'] == "user") {
 						</td>
 					</tr>
 
-					<tr>
-						<td><label for="">Certification :</label></td>
-						<td><select name="certification" required>
-								<option><?php echo $row['certification']; ?></option>
-								<option>Yes</option>
-								<option>No</option>
-							</select></td>
-					</tr>
+					< 
 
 					<tr>
 						<td></td>
 						<td>
 							<button name="update_newbtn"
-								style="margin-top:20px;background: green; color:white; border-radius:20px;width: 90px;">Update</button>
+								style="margin-top:20px;background: green; color:white; border-radius:20px;width: 60%">Update</button>
 						</td>
 					</tr>
 					<?php
@@ -310,7 +305,7 @@ elseif ($_SESSION['usertype'] == "user") {
 		</table>
 
 	</form>
-	<button style="background: cyan; border-radius:50px"><a style="color:black; text-decoration:none"
+	<button style="background: cyan; border-radius:50px;width:10%;height:5%"><a style="color:black;font-size:20px; text-decoration:none"
 			href="getdata.php">back</a></button>
 
 	</html>

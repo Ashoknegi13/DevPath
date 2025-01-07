@@ -13,7 +13,7 @@
 	$duration =             $_POST['duration'];
 	$prise =                $_POST['prise'];
 	$course_meterials =     $_POST['course_meterials'];
-	$certification =        $_POST['certification'];
+	// $certification =        $_POST['certification'];
 	$p_image 			= 		$_FILES['f_name']['name'];
 	$tmp_image 			= 		$_FILES['f_name']['tmp_name'];
 	$folder =              "product_logo/".$p_image;
@@ -29,7 +29,6 @@
 	                           duration='$duration',
 	                           prise='$prise',
 	                           course_meterials='$course_meterials',
-	                           certification='$certification',
 	                            p_image = '$p_image'  
 	                            WHERE product_id = '$pid' ";
 
@@ -42,8 +41,7 @@
 	                          course_content='$course_content',
 	                           duration='$duration',
 	                           prise='$prise',
-	                           course_meterials='$course_meterials',
-	                           certification='$certification' 
+	                           course_meterials='$course_meterials'
 	                            WHERE product_id = '$pid' ";
 	        }
 
@@ -73,7 +71,7 @@
 	$duration =             $_POST['duration'];
 	$prise =                $_POST['prise'];
 	$course_meterials =     $_POST['course_meterials'];
-	$certification =        $_POST['certification'];
+ 
 
 	$sql = "UPDATE product SET  
 	                          course_title='$course_title',
@@ -83,8 +81,7 @@
 	                          course_content='$course_content',
 	                           duration='$duration',
 	                           prise='$prise',
-	                           course_meterials='$course_meterials',
-	                           certification='$certification' 
+	                           course_meterials='$course_meterials'
 	                            WHERE product_id = '$pid' ";
 
 	$result = mysqli_query($conn,$sql) or die("Query failed");

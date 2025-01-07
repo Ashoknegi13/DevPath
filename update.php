@@ -3,6 +3,7 @@
   	session_start();
   	 
    include("nav.php");
+   include("bg_color.php");
   if($_SESSION['usertype']=="admin"){
   ?>
 <html>
@@ -10,21 +11,20 @@
 	  <style> 
 	  	body{
 				font-family: arial;
-			background-image: url('upload-image/2.jpg');
-				background-size: cover;
-				opacity: 0.9;
+				color : #fff;
 			}
+			 
 	  	#box{
 				border: 2px solid  slateblue;
-/*				background-color: tan;*/
-                background-color:  gray;
+				background:  linear-gradient(135deg, #1d2671, #c33764);
 			 	padding: 10px;
- 			    margin-left: 440px;
+				 width: 50%;
+				 margin-left: 23%;
 				text-align: center;
 				margin-top: 70px;
 				border-radius: 50px;
 				height: 400px;
-				width: 500px;
+				
 
 			}
 			#box input,select{
@@ -104,8 +104,8 @@
 
 							 
 							<tr>
-								<td>
-								<button type="Update" style="background: green; color:white; border-radius: 50px;width: 120px;height: 30px;" >update</button>
+								<td></td><td>
+								<button type="Update" style="background: green; color:white; border-radius: 50px;width: 30%;height: 30px;" >update</button>
 								</td>
 							</tr>
 						<?php
@@ -127,18 +127,20 @@
      <style>
 	  	body{
 				font-family: arial;
-             background-image: url('upload-image/2.jpg');
-				background-size: cover;
-				opacity: 0.9;	 
+				color : #fff;
 			}
+			 
 	  	#box{
 				border: 2px solid  slateblue;
-				padding: 10px;
-				margin-left:520px;
+				background:  linear-gradient(135deg, #1d2671, #c33764);
+			 	padding: 10px;
+				 width: 50%;
+				 margin-left: 23%;
 				text-align: center;
 				margin-top: 70px;
 				border-radius: 50px;
 				height: 400px;
+				
 
 			}
 			#box input{
@@ -190,8 +192,8 @@
 							</tr>
 
 							<tr>
-								<td>
-								<button type="Update" style="background:lightgreen;border-radius: 20px;width: 80px;height: 30px;">update</button>
+								<td></td><td>
+								<button type="Update" style="background:lightgreen;border-radius: 20px;width:20%;height: 40px;">update</button>
 								</td>
 						
 					       				   

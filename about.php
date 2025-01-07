@@ -2,76 +2,102 @@
 include 'bg_color.php';
 session_start();
 if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SESSION['usertype'] == "normal") {
+?>
 
-	?>
+<!DOCTYPE html>
+<html lang="en">
 
-	<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+			background:  linear-gradient(135deg, #1d2671, #c33764);
+			color : #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
 
-	<head>
-		<title>
-			About us
-		</title>
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-				font-size: 17PX;
-			}
-		</style>
-	</head>
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: px;
+        }
 
-	<body>
-		<?php
-		include 'nav.php';
-		?>
-		<header>
-			<ul>
-				<li>
-					<h1>Welcome Section </h1>
-				</li>
-		</header>
-		<b>Headline :</b>"Empowering Your Coding Journey"
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-		<p><b>Discription : </b>
-			" Welcome to <u style="color:red">DevPath</u> your gateway to mastering programming skills! We believe that
-			coding is for everyone , and our plateform is designed to make learniing both accessible and enjoyable to make
-			learning both accessibl eand enjoyable for beginners and professionals alike ".
-		</p>
+        li {
+            font-size: 1.1em;
+            
+        }
 
-		<h1>
-			<li> Mission Statement </li>
-		</h1>
+        .container {
+			background:  linear-gradient(135deg, #1d2671, #c33764);
+			color : #fff;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+          
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
 
-		<p>
-			" our mission is to provide high-qualit, affordable , and practical programming courses that help you build
-			real-world skills and achieve your carrer goals."
-		</p>
+        h2 {
+            font-size: 2em;
+            margin-top: 20px;
+        }
 
-		<h2>
-			<li>What We Offer </li>
-		</h2>
-		<ul>
-			<li><strong>Integrity : </strong>We belive in being transparent and honest with our clients and parteners.</li>
-			<li><strong>Innovation : </strong>We belive in being transparent and honest with our clients and parteners.</li>
-			<li><strong>Customer Focus : </strong>We belive in being transparent and honest with our clients and parteners.
-			</li>
-			<li><strong>Teamwork : </strong>We belive in being transparent and honest with our clients and parteners.</li>
-		</ul>
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
 
-		<h2>Why Choose Us?</h2>
-		<p>
-			At Ashoka organization , we take pride in our customers-appproch. With a combination of exprience , technical
-			expertise , and a passion for what we do , we are confident in delivering outstanding result for each project.
-		</p>
-	</body>
-	<?php
-	include 'footer.php';
-	?>
+        .highlight {
+            color: red;
+        }
 
-	</html>
-	<?php
+        b {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <?php include 'nav.php'; ?>
+ 
+
+    <div class="container">
+        <p><b>Headline:</b> "Get in Touch with Us"</p>
+        <p><b>Description:</b> Welcome to <u class="highlight">DevPath</u> Contact page! We believe that your feedback and questions are important. Please feel free to reach out to us for any inquiries, suggestions, or assistance you need related to our courses and services.</p>
+
+        <h2>Contact Information</h2>
+        <ul>
+            <li><strong>Phone Number:</strong> 9045509148</li>
+            <li><strong>Email:</strong> negiashok132@gmail.com</li>
+            <li><strong>Instagram:</strong> @ashoknegi_13</li>
+            <li><strong>WhatsApp Business:</strong> 9045509148</li>
+        </ul>
+
+        <h2>Why Contact Us?</h2>
+        <p>At DevPath, we take pride in providing excellent customer service and support. Whether you have a question about our courses, need assistance with a project, or simply want to know more about our offerings, we are here to help. Our team is dedicated to providing timely responses and professional guidance for all your queries.</p>
+
+        <h2>How to Reach Us</h2>
+        <p>If you have any questions or need further assistance, feel free to contact us through the provided channels. We respond to all inquiries as quickly as possible, and we value every opportunity to connect with our users.</p>
+    </div>
+
+    <?php include 'footer.php'; ?>
+
+</body>
+
+</html>
+
+<?php
 } else {
-	header("Location: signup.php");
+    header("Location: signup.php");
 }
 ?>

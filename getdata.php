@@ -320,10 +320,10 @@
 			font-family: arial;
 		}
   #modal{
-		 background:  TAN;
+	background:  linear-gradient(135deg, #1d2671, #c33764);
 		 position: fixed;
 		 top: 150px;
-width: 1300px;
+        width:100%;
 		height:  100%;
 
 		z-index: 100;
@@ -635,11 +635,11 @@ width: 1300px;
 			font-family: arial;
 		}
   #modal{
-		 background:  TAN;
+	background:  linear-gradient(135deg, #1d2671, #c33764);
 		 margin-left: 0px;
 		 position: fixed;
 		 top: 150px;
-		width: 1300px;
+		width:  100%;
 		height:  100%;
 		z-index: 100;
 		display: none;
@@ -718,7 +718,7 @@ width: 1300px;
 				<tr>
 					<th>User ID</th>
 					<th style="width:100px;">Profile picture</th>
-					<th style="width:100px;"	>name</th>
+					<th style="width:100px;">name</th>
 					<th style="width:50px;"> age</th>
 					<th style="width:300px;">Email</th>
 					<th style="width:100px;">Gender</th>

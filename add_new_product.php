@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("nav.php");
+include 'bg_color.php';
    
  
 if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
@@ -11,8 +12,6 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 		<title>Add New Product</title>
 		<style>
 			body{ 
-				background-image: url('upload-image/2.jpg');
-		    	background-size: cover;	
 				color : #fff;
 				
 				
@@ -113,14 +112,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 							style="padding: 5px;border-radius: 40PX;"></textarea></td>
 				</tr>
 
-				<tr>
-					<td><label for="">Certification :</label></td>
-					<td><select name="certification" required style="padding: 5px;  width: 190PX; border-radius: 40PX">
-							<option>--SELECT--</option>
-							<option>Yes</option>
-							<option>No</option>
-						</select></td>
-				</tr>
+				 
 
 				<tr>
 					<td><label>Select Image : </label></td>
@@ -132,14 +124,14 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 					<td></td>
 					<td>
 						<button name="add_newbtn"
-							style="background: green; color:white; border-radius: 50px;">Sumbit</button>
+							style="background: green; color:white; border-radius: 50px;width:30%;height:80%">Sumbit</button>
 					</td>
 
 				</tr>
 			</table>
 		</form>
 
-		<button style="background: blue; border-radius:50px;width:200px;height:40px;"><a style="text-decoration: none;color:  white; font-size:20px" href="getdata.php">Back</a></button>
+		<button style="background: blue; border-radius:50px;width:10%;height:40px;"><a style="text-decoration: none;color:  white; font-size:20px" href="getdata.php">Back</a></button>
 	</body>
 
 	</html>
