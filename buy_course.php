@@ -96,7 +96,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 							</td>
 						</tr>
 
-						<tr>
+						<tr> 
 							<td>
 								<label>Phone No. :</label>
 							</td>

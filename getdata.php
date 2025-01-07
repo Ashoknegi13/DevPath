@@ -334,7 +334,7 @@ if ($_SESSION['usertype'] == "admin") {
 					url: "ajax-live-search.php",
 					type: "POST",
 					data: { search: search_term },
-					success: function (data) {
+					success : function (data){
 						$("#modal table").html(data);
 
 					}
