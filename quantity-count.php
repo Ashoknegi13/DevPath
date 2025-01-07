@@ -9,8 +9,7 @@ $output = "";
 if(mysqli_num_rows($result)>0){
 				while($row= mysqli_fetch_assoc($result)) {
 					$normal_value = $row['prise'];
-
-					 
+ 
 					$normal_value  = intval($normal_value);
 				   
 				    $total_prise= ($normal_value * $enter_quantity);
