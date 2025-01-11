@@ -1,11 +1,10 @@
-
-<html>
 <?php
 session_start();
 include("nav.php");
 if ($_SESSION['usertype'] == "admin") {
 	?>
 
+	<html>
 
 	<head>
 		<style>
@@ -39,6 +38,9 @@ if ($_SESSION['usertype'] == "admin") {
 
 			#box label {
 				font-size: 20px;
+			}
+			textarea{
+				width:40%;	
 			}
 		</style>
 	</head>
@@ -87,7 +89,7 @@ if ($_SESSION['usertype'] == "admin") {
 
 					<tr>
 						<td><label for="">Course Discription :</label></td>
-						<td><input type="text" name="course_discription" value="<?php echo $row['course_discription']; ?>" required>
+						<td><textarea   name="course_discription"  required><?php echo $row['course_discription']; ?></textarea>
 						</td>
 					</tr>
 
@@ -103,12 +105,12 @@ if ($_SESSION['usertype'] == "admin") {
 
 					<tr>
 						<td><label for="">prerequisites :</label></td>
-						<td><input type="text" name="prerequisites" value="<?php echo $row['prerequisites']; ?>" required></td>
+						<td><textarea name="prerequisites"  required> <?php echo $row['prerequisites']; ?> </textarea></td>
 					</tr>
 
 					<tr>
 						<td><label for="">Course Content : </label></td>
-						<td><input type="text" name="course_content" value="<?php echo $row['course_content']; ?>" required></td>
+						<td><textarea  name="course_content"  required> <?php echo $row['course_content']; ?> </textarea></td>
 					</tr>
 
 					<tr>
@@ -131,7 +133,7 @@ if ($_SESSION['usertype'] == "admin") {
 
 					<tr>
 						<td><label for="">Course Meterials :</label></td>
-						<td><input type="text" name="course_meterials" value="<?php echo $row['course_meterials']; ?>" required>
+						<td><textarea name="course_meterials"  required><?php echo $row['course_meterials']; ?></textarea>
 						</td>
 					</tr>
 
@@ -157,14 +159,14 @@ if ($_SESSION['usertype'] == "admin") {
 	<button style="background: cyan; border-radius:50px;height:5%"><a style="color:black;font-size:20px; text-decoration:none"
 			href="getdata.php">back</a></button>
 
- 
+	</html>
 
 	<?php
 }  // end of admin update
 elseif ($_SESSION['usertype'] == "user") {
 	?>
 
- 
+	<html>
 
 	<head>
 		<style>
@@ -242,7 +244,7 @@ elseif ($_SESSION['usertype'] == "user") {
 
 					<tr>
 						<td><label for="">Course Discription :</label></td>
-						<td><input type="text" name="course_discription" value="<?php echo $row['course_discription']; ?>" required>
+						<td><textarea name="course_discription"  required><?php echo $row['course_discription']; ?></textarea>
 						</td>
 					</tr>
 
@@ -258,12 +260,12 @@ elseif ($_SESSION['usertype'] == "user") {
 
 					<tr>
 						<td><label for="">prerequisites :</label></td>
-						<td><input type="text" name="prerequisites" value="<?php echo $row['prerequisites']; ?>" required></td>
+						<td><input type="text" name="prerequisites" required><?php echo $row['prerequisites']; ?> </td>
 					</tr>
 
 					<tr>
 						<td><label for="">Course Content : </label></td>
-						<td><input type="text" name="course_content" value="<?php echo $row['course_content']; ?>" required></td>
+						<td><textarea name="course_content"  required><?php echo $row['course_content']; ?></textarea></td>
 					</tr>
 
 					<tr>
@@ -286,7 +288,7 @@ elseif ($_SESSION['usertype'] == "user") {
 
 					<tr>
 						<td><label for="">Course Meterials :</label></td>
-						<td><input type="text" name="course_meterials" value="<?php echo $row['course_meterials']; ?>" required>
+						<td><textarea name="course_meterials"  required><?php echo $row['course_meterials']; ?> </textarea>
 						</td>
 					</tr>
 
@@ -309,6 +311,7 @@ elseif ($_SESSION['usertype'] == "user") {
 	<button style="background: cyan; border-radius:50px;width:10%;height:5%"><a style="color:black;font-size:20px; text-decoration:none"
 			href="getdata.php">back</a></button>
 
+	</html>
 
 	<?php
 
@@ -321,5 +324,3 @@ elseif ($_SESSION['usertype'] == "user") {
 }
 include 'footer.php';
 ?>
-
-	</html>

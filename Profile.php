@@ -59,8 +59,9 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Profile</title>
 	   <style>
-	  	body{
-			 
+	  	body{	 
+			margin: 0px;
+			padding: 0px;
 		    	background-size: cover;
 				color : #fff;
 			}

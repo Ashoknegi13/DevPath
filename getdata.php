@@ -10,6 +10,8 @@
 			font-family: arial;
 			font-size: 15px;
 			width: 100%;
+			margin:0;
+			padding:0;
 
 		}
 			th{
@@ -215,55 +217,12 @@
 						}
 					echo ' </ul>';
 				}
+		
+				include'chatgpt.php';
 		?>
 		 		
 
-  <br><br><h3 align="center" style="color:white;"> "Success Starts Here - Choose a Course and Get Started!" </h3>	 
-		<table border="1px solid black" cellpadding="5px" cellspacing="0px" style="margin-left:200px;">
-				<tr>
-					<th>Sr no.</th>
-					<th style="width:200px;">Course Title</th>
-			    <th>Full Description</th>	
-					<th style="width:100px;">edit</th>
-					<th style="width:100px;">delete</th>
-					<th style="width:100px;">Buy</th>
-					<th style="width:200px;">Add to cart</th>
-					 
-				</tr>
-				<?php
-					include "connection.php";
-					$sql = "SELECT *FROM product";
-					$result = mysqli_query($conn,$sql) or die("query failed");
-					if(mysqli_num_rows($result)>0)
-					{  $count=0;
-						while($row = mysqli_fetch_assoc($result)){
-				      $count++;  ?>	
-				<tr>
-					 <td style="font-size:20px;"><?php echo $count; ?></td>
-					 <td><?php echo $row['course_title']; ?></td>
-					  <td  ><a  style="color: white ; text-decoration: none;font-size: 14px" href="course.php?id=<?php echo $row['product_id']; ?>">Details..</a></td>
-
-					  <td><button style="background: blue;width: 70px"><a style="color:white; text-decoration:none;" href="edit_product.php?id=<?php echo $row['product_id']; ?>">edit</a></button></td>
-
-					  <td><button style="background: red;width: 70px"><a  style="color:white; text-decoration:none;" href="delete_product.php?id=<?php echo $row['product_id']; ?>">delete<a/></button></td>
-
-					  		<td><button style="background: lightgreen;width: 70px;"><a style="color:black; text-decoration:none; font-size: 12px;  " href="buy_course.php?id=<?php echo $row['product_id']; ?>">Buy</a></button></td>
-
-					 <td>
-					 	<form action="insert-cart-data.php" method="POST">
-					 	 <label>Quentity : </label>
-					 	 <input type="hidden" name="product_cart"  value="<?php echo $row['product_id'];?>">
-					 	<input type="number" name="quantity" id="quantity" value="1" style="width:40px" >
-					 	<input type="submit" style="background:green;border-radius: 30px; color:white;width: 60px;cursor: pointer;" id="add_to_cart" value="add" name="add_to_cart_btn" > 
-					 </form>	
-					 </td> 	
-					  		
-				</tr>
- 
-				<?php
-				}
-			}
-		?>
+  <br><br> 
 			 </table><br><hr><br>
 	 	 
 	 		 <button style=" background:cyan; margin-left: 420px;width: 300px;height:50px;"><a style="font-size:20px;text-decoration:none; color:black;" href="add_new_product.php">ADD NEW PRODUCTS</a></button>
