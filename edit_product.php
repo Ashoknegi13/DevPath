@@ -1,10 +1,11 @@
+
+<html>
 <?php
 session_start();
 include("nav.php");
 if ($_SESSION['usertype'] == "admin") {
 	?>
 
-	<html>
 
 	<head>
 		<style>
@@ -156,14 +157,14 @@ if ($_SESSION['usertype'] == "admin") {
 	<button style="background: cyan; border-radius:50px;height:5%"><a style="color:black;font-size:20px; text-decoration:none"
 			href="getdata.php">back</a></button>
 
-	</html>
+ 
 
 	<?php
 }  // end of admin update
 elseif ($_SESSION['usertype'] == "user") {
 	?>
 
-	<html>
+ 
 
 	<head>
 		<style>
@@ -308,7 +309,6 @@ elseif ($_SESSION['usertype'] == "user") {
 	<button style="background: cyan; border-radius:50px;width:10%;height:5%"><a style="color:black;font-size:20px; text-decoration:none"
 			href="getdata.php">back</a></button>
 
-	</html>
 
 	<?php
 
@@ -321,3 +321,5 @@ elseif ($_SESSION['usertype'] == "user") {
 }
 include 'footer.php';
 ?>
+
+	</html>
