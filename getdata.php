@@ -8,7 +8,7 @@
   	<style>
   			body{
 			font-family: arial;
-			font-size: 15px;
+			font-size: 16px;
 			width: 100%;
 			margin:0;
 			padding:0;
@@ -94,7 +94,7 @@
    <?php include'bg_color.php'; ?>
 
    <!-- This  model for search modal ----------------------------------------------------------->
- <div id="search-bar" style="margin-left: 900px;">
+ <div id="search-bar" style="margin-left: 80%;">
 				<label style="font-size: 25px;">Search :</label>
 						<input type="Search" id="search" placeholder="search username" autocomplete="off" style="border-radius:50px;padding: 5px;">
 		</div>
@@ -120,9 +120,9 @@
   	       }
       ?>	
 
-</u>! Let's Unlock the World of Knowledge!"</h2><br>
+</u>! Let's Unlock the World of Knowledge!"</h2><br><br>
 	<body>	
-		<table  border="1px solid black" cellpadding="5px" cellspacing="0px " style="margin-left: 50px;">
+		<table  border="1px solid black" cellpadding="5px" cellspacing="0px " style=" margin:auto;width:90%">
 				<tr>
 					<th>User ID</th>
 					<th>Profile picture</th>
@@ -138,7 +138,7 @@
 				</tr>
 				<?php 
 				include "connection.php";
-					$limit = 3;
+					$limit = 5;
 					if(isset($_GET['page'])){
 						$page = $_GET['page'];
 					}else{
@@ -215,7 +215,7 @@
 					echo '<button style="background:cyan"><li><a style="text-decoration: none;" href=" getdata.php?page='.($page+1).'  ">Next</a></li></button>';
 				}
 						}
-					echo ' </ul>';
+					echo ' </ul><br><br>';
 				}
 		
 				include'chatgpt.php';
@@ -225,8 +225,8 @@
   <br><br> 
 			 </table><br><hr><br>
 	 	 
-	 		 <button style=" background:cyan; margin-left: 420px;width: 300px;height:50px;"><a style="font-size:20px;text-decoration:none; color:black;" href="add_new_product.php">ADD NEW PRODUCTS</a></button>
-	 		  <button style=" background:cyan;width: 300px;height:50px;"><a style="text-decoration:none; color:black;font-size:20px" href="sell_product.php">Show all sell products</a></button>
+	 		 <button style=" background:blue; margin-left: 420px;width: 300px;height:50px;"><a style="font-size:20px;text-decoration:none; color:white;" href="add_new_product.php">ADD NEW PRODUCTS</a></button>
+	 		  <button style=" background:blue;width: 300px;height:50px;"><a style="text-decoration:none; color:white;font-size:20px" href="sell_product.php">Show all sell products</a></button>
 
 
 
@@ -349,7 +349,7 @@
 	  
 <!-- This  model for search modal ----------------------------------------------------------->
 
-	    <div id="search-bar" style="margin-left: 900px;">
+	    <div id="search-bar" style="margin-left: 80%;">
 				<label style="font-size: 25px;">Search :</label>
 						<input type="Search" id="search" placeholder="search username" autocomplete="off" style="border-radius:50px;padding: 5px;">
 					</div>
@@ -361,11 +361,7 @@
 		</div>
 
  
-
-
- 
-
- <h2 style="text-align:center; color: white;">"Welcome
+<h2 style="text-align:center; color: white;">"Welcome
  <u style="color:red"> <?php
   	      include "connection.php";
   				$uid=  $_SESSION['uid'];
@@ -380,22 +376,22 @@
   	       }
       ?>
       	</u>! Let's Unlock the World of Knowledge!"</h2><br>
-		<table  border="1px solid black" cellpadding="5px" cellspacing="0px " style="margin-left: 230px;">
+		<table  border="1px solid black" cellpadding="5px" cellspacing="0px " style="margin:auto;width:70%">
 
-				<tr>
+		<br><tr>
 					<th>User ID</th>
 					<th>Profile picture</th>
-					<th style="width:100px;">name</th>
-					<th style="width:200px;">email</th>
-					<th style="width:100px;">phone</th>
-					<th style="width:100px;">age</th>
-					<th style="width:100px;">edit</th>
+					<th>name</th>
+					<th>email</th>
+					<th>phone</th>
+					<th>age</th>
+					<th>edit</th>
 				</tr>
 				<?php 
 		 
 				
    // this is code for pagination 
-				$limit = 3;
+				$limit = 5;
 				
 				if(isset($_GET['page'])){
 					$page = $_GET['page'];
@@ -456,84 +452,48 @@
  							
  							$total_page = ceil($total_records/$limit);
 			 
-		 echo '<ul style="margin-left: 550px; list-style-type: none;">';
+		 echo '<ul style="margin-left: 700px; list-style-type: none;">';
 		       if($page>1){
 		       	  $first_page=1;
-					echo '<button style="background:cyan"><li><a style="text-decoration:none;color:black" href="getdata.php?page='.($page-1).'  ">Pre</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a style="text-decoration:none;color:black" href="getdata.php?page='.($page-1).'  ">Pre</a></li></button>';
 
-			    		echo '<button style="background:cyan"><li ><a style="text-decoration:none;color:black" href=" getdata.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:60px;height:30px"><li ><a style="text-decoration:none;color:black" href=" getdata.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
 			    		 echo "<b>....</b>";
 						}
 					 for($i=1;$i<=$total_page;$i++){
 			    
 
 						   if($i==$page AND $i<=$total_page){ for($j=$i;$j<$i+1;$j++)
-						   { echo '<button style="background:blue"><li ><a style="text-decoration:none;color:white" href=" getdata.php?page='.$j.' ">'.$j.'</a></li></button>';
+						   { echo '<button style="background:blue;width:50px;height:20px"><li ><a style="text-decoration:none;color:white" href=" getdata.php?page='.$j.' ">'.$j.'</a></li></button>';
 						   	 } }
 
 			   }
 			    if($page<$total_page){
 
 			    	  echo "<b>....</b>";
-			    		echo '<button style="background:cyan"><li ><a style="text-decoration:none;color:black" href=" getdata.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:60px;height:30px"><li ><a style="text-decoration:none;color:black" href=" getdata.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
 			    		if($page==$total_page){
 					echo '';
 				}else{
-					echo '<button style="background:cyan" ><li><a style="text-decoration:none;color:black" href=" getdata.php?page='.($page+1).'  ">Next</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px" ><li><a style="text-decoration:none;color:black" href=" getdata.php?page='.($page+1).'  ">Next</a></li></button>';
 				}
 						}
-					echo ' </ul>';
+					echo ' </ul><br><br><br>';
 				}
 		?>
 		 		 
 		
 				 
-				 
+			<?php
+				include'chatgpt.php';
+			?> 
 
 
-	<br><br><h3 align="center" style="color:white;"> "Success Starts Here - Choose a Course and Get Started!" </h3>
- 
-		<table border="1px solid black" cellpadding="5px" cellspacing="0px" style="margin-left: 220px;">
-				<tr>
-					<th style="width:100px;">ID</th>
-					<th style="width:200px;">Course Title</th>
-			         <th>Full Description</th>
-					<th style="width:100px;"> edit</th>
-					<th style="width:100px;">Buy</th>
-					<th style="width:200px;">Add to Cart</th>
-				</tr>
-				<?php
-					include "connection.php";
-					$sql = "SELECT *FROM product";
-					$result = mysqli_query($conn,$sql) or die("query failed");
-					if(mysqli_num_rows($result)>0)
-					{
-						while($row = mysqli_fetch_assoc($result)){
-				?>
-				<tr>
-					 <td><?php echo $row['product_id']; ?></td>
-					 <td><?php echo $row['course_title']; ?></td>
-					  <td><a style="color:white" href="course.php?id=<?php echo $row['product_id']; ?>">Click here</a></td>
-				<td><button style="background:  green;width: 70px;"><a style="text-decoration:none;color: white;" href="edit_product.php?id=<?php echo $row['product_id']; ?>">edit</a></button></td>
-				<td><button style="background: blue;width: 70px;"><a style="text-decoration:none;color: white;" href="buy_course.php?id=<?php echo $row['product_id']; ?>">Buy</a></button></td>
-			
-  <td>
-					 	<form action="insert-cart-data.php" method="POST">
-					 	 <label>Quentity : </label>
-					 	 <input type="hidden" name="product_cart"  value="<?php echo $row['product_id'];?>">
-					 	<input type="number" name="quantity" id="quantity" value="1" style="width:40px" >
-					 	<input type="submit" style="background:green;border-radius: 30px; color:white;width: 60px;cursor: pointer;" id="add_to_cart" value="add" name="add_to_cart_btn" > 
-					 </form>	
-					 </td> 	
-				</tr>
-
-				<?php
-				}
-			}
-		?>
-			 </table><br><hr><br>
-	 		 <button style=" background:cyan; margin-left: 350px;width: 300px;height:50px"><a style="text-decoration:none; color:black;font-size: 20px;" href="add_new_product.php">ADD NEW PRODUCTS</a></button>
-	 		  <button style=" background:cyan;width: 300px;height:50px"><a style="text-decoration:none; color:black;font-size: 20px" href="sell_product.php">Show all sell products</a></button>
+	<br><br> 
+		 
+			 </table><br><hr><br><br>
+	 		 <button style=" background:blue; margin-left: 550px;width: 300px;height:50px"><a style="text-decoration:none; color:white;font-size: 20px;" href="add_new_product.php">ADD NEW PRODUCTS</a></button>
+	 		  <button style=" background:blue;width: 400px;height:50px"><a style="text-decoration:none; color:white;font-size: 20px" href="sell_product.php">SHOW ALL SELLING PRODUCTS</a></button>
 
 
 	 		<script src="js/jquery.js"></script>
@@ -644,7 +604,7 @@
    </style>
 
 		   <?php include'bg_color.php'; ?> 
-		    <div id="search-bar" style="margin-left: 1000px;">
+		    <div id="search-bar" style="margin-left: 80%;">
 				<label style="font-size: 25px;">Search :</label>
 						<input type="Search" id="search" placeholder="search username" autocomplete="off" style="border-radius:50px;padding: 5px;">
 					</div>
@@ -673,19 +633,19 @@
       ?>
     </u>! Let's Unlock the World of Knowledge!"</h2><br>
 		   
-		  	<table  border="1px solid black" cellpadding="5px" cellspacing="0px " style="margin-left:300px">
+	<br> <table  border="1px solid black" cellpadding="5px" cellspacing="0px " style="margin-left:150px;width:80%;text-align:center">
 				<tr>
 					<th>User ID</th>
-					<th style="width:100px;">Profile picture</th>
-					<th style="width:100px;">name</th>
-					<th style="width:50px;"> age</th>
-					<th style="width:300px;">Email</th>
-					<th style="width:100px;">Gender</th>
+					<th  >Profile picture</th>
+					<th  >name</th>
+					<th  > age</th>
+					<th  >Email</th>
+					<th  >Gender</th>
 				</tr>
 				<?php 
 				 
 			 // this is code for pagination 
-				$limit = 3;
+				$limit = 5;
 				
 				if(isset($_GET['page'])){
 					$page = $_GET['page'];
@@ -739,77 +699,41 @@
 		 echo '<ul style="margin-left: 580px; list-style-type: none;">';
 		       if($page>1){
 		       	  $first_page=1;
-					echo '<button style="background:cyan"><li><a style="color:black;text-decoration:none" href="getdata.php?page='.($page-1).'  ">Pre</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a style="color:black;text-decoration:none" href="getdata.php?page='.($page-1).'  ">Pre</a></li></button>';
 
-			    		echo '<button style="background:cyan" ><li ><a  style="color:black;text-decoration:none" href=" getdata.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:60px;height:30px" ><li ><a  style="color:black;text-decoration:none" href=" getdata.php?page='.$first_page.' ">'.$first_page.'</a></li></button>'; 
 			    		 echo "<b>....</b>";
 						}
 					 for($i=1;$i<=$total_page;$i++){
 			    
 
 						   if($i==$page AND $i<=$total_page){ for($j=$i;$j<$i+1;$j++)
-						   { echo '<button  style="background:blue"><li ><a style="color:white;text-decoration:none" href=" getdata.php?page='.$j.' ">'.$j.'</a></li></button>';
+						   { echo '<button  style="background:blue;width:50px;height:20px"><li ><a style="color:white;text-decoration:none" href=" getdata.php?page='.$j.' ">'.$j.'</a></li></button>';
 						   	 } }
 
 			   }
 			    if($page<$total_page){
 
 			    	  echo "<b>....</b>";
-			    		echo '<button style="background:cyan"><li ><a style="color:black;text-decoration:none" href=" getdata.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
+			    		echo '<button style="background:cyan;width:60px;height:30px"><li ><a style="color:black;text-decoration:none" href=" getdata.php?page='.$total_page.' ">'.$total_page.'</a></li></button>'; 
 			    		if($page==$total_page){
 					echo '';
 				}else{
-					echo '<button style="background:cyan"><li><a  style="color:black;text-decoration:none" href=" getdata.php?page='.($page+1).'  ">Next</a></li></button>';
+					echo '<button style="background:cyan;width:60px;height:30px"><li><a  style="color:black;text-decoration:none" href=" getdata.php?page='.($page+1).'  ">Next</a></li></button>';
 				}
 						}
-					echo ' </ul>';
+					echo ' </ul><br><br>';
 				}
 		?>
 		 		 
  
-		<br><br><h3 align="center" style="color:white;"> "Success Starts Here - Choose a Course and Get Started!" </h3>
+		<br><br> 
+		<?php
+				include'chatgpt.php';
+			?> 
 
-		 
-		<table border="1px solid black" cellpadding="5px" cellspacing="0px" style="margin-left: 250px;">
-				<tr>
-					<th style="width:100px;">ID</th>
-					<th style="width:300px;">Course Title</th>
-			        <th>Full Description</th>
-			        <th style="width:100px;">Buy</th>
-			         <th style="width:200px;">Add to Cart</th>
-					
-				</tr>
-				<?php
-					include "connection.php";
-					$sql = "SELECT *FROM product";
-					$result = mysqli_query($conn,$sql) or die("query failed");
-					if(mysqli_num_rows($result)>0)
-					{
-						while($row = mysqli_fetch_assoc($result)){
-				?>
-				<tr>
-					 <td><?php echo $row['product_id']; ?></td>
-					 <td><?php echo $row['course_title']; ?></td>
-					  <td><a style="color:white" href="course.php?id=<?php echo $row['product_id']; ?>">Click here</a></td>
-				<td><button style="background:green;width: 80px;"><a style="text-decoration: none;color:white"  href="buy_course.php?id=<?php echo $row['product_id']; ?>">Buy</a></button></td>
-			
-				  <td>
-					 	<form action="insert-cart-data.php" method="POST">
-					 	 <label>Quentity : </label>
-					 	 <input type="hidden" name="product_cart"  value="<?php echo $row['product_id'];?>">
-					 	<input type="number" name="quantity" id="quantity" value="1" style="width:40px" >
-					 	<input type="submit" style="background:green;border-radius: 30px; color:white;cursor:pointer;width: 60px;" id="add_to_cart" value="add" name="add_to_cart_btn" > 
-					 </form>	
-					 </td>
-
-				</tr>
- 
-				<?php
-				}
-			}
-		?>
-			 </table><br><hr>
-			   <button style="background:cyan; margin-left: 420px;width: 300px;height:50px"><a style="font-size:20px;color:black; text-decoration:none;" href="sell_product.php">Show all sell products</a></button>
+			<br> </table><br><hr>
+			  <br><br> <button style="background:blue; margin-left: 650px;width: 300px;height:50px"><a style="font-size:20px;color:white; text-decoration:none;" href="sell_product.php">Show all sell products</a></button>
 			
 	 	 
 	 		  	<script src="js/jquery.js"></script>

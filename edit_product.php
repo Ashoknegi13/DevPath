@@ -94,7 +94,7 @@ if ($_SESSION['usertype'] == "admin") {
 					</tr>
 
 					<tr>
-						<td><label for=""> Level : </label></td>
+						<td><label for="level"> Level : </label></td>
 						<td><select name="level" value="<?php echo $row['level']; ?>" required>
 								<option><?php echo $row['level']; ?></option>
 								<option>Biggner</option>
@@ -104,7 +104,7 @@ if ($_SESSION['usertype'] == "admin") {
 					</tr>
 
 					<tr>
-						<td><label for="">prerequisites :</label></td>
+						<td><label for="prerequisites">prerequisites :</label></td>
 						<td><textarea name="prerequisites"  required> <?php echo $row['prerequisites']; ?> </textarea></td>
 					</tr>
 
@@ -260,7 +260,7 @@ elseif ($_SESSION['usertype'] == "user") {
 
 					<tr>
 						<td><label for="">prerequisites :</label></td>
-						<td><input type="text" name="prerequisites" required><?php echo $row['prerequisites']; ?> </td>
+						<td><textarea  name="prerequisites" required><?php echo $row['prerequisites']; ?></textarea> </td>
 					</tr>
 
 					<tr>

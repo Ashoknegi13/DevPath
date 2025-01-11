@@ -20,7 +20,7 @@
 
 
 	if(!empty($p_image)){
-	$sql = "UPDATE product SET product_id = '$product_id',
+	echo$sql = "UPDATE product SET product_id = '$product_id',
 	                          course_title='$course_title',
 	                          course_discription='$course_discription',
 	                          level='$level',

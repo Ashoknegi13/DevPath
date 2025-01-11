@@ -1,5 +1,7 @@
  
-    <style>
+
+
+<style>
     
         .container {
             max-width: 1200px;
@@ -74,7 +76,7 @@
     </style>
 </head>
 <body>
-    <h1 style="text-align: center; margin-bottom: 20px; color: white;"> "Success Starts Here - Choose a Course and Get Started!" </h1>
+    <br><u style='color:tan; '><h1 style="text-align: center; margin-bottom: 20px; color:  orange;"> "Success Starts Here - Choose a Course and Get Started!" </h1></u><br><br>
     <div class="container">
         <?php
         include "connection.php";
@@ -87,21 +89,31 @@
         <div class="card">
             <div class="card-header"><?php echo $row['course_title']; ?></div>
             <div class="card-body">
-                <p><strong>ID:</strong> <?php echo $row['id']; ?></p>
+                <p style='color:orange'><strong>ID:</strong> <?php echo $row['product_id']; ?></p>
                 <p><strong>Description:</strong> <?php echo $row['course_discription']; ?> <br><br>
                     <a style="color: white; text-decoration: none; font-size: 20px" href="course.php?id=<?php echo $row['product_id']; ?>"><b><u>Full description.....</u></b></a>
                 </p>
             </div>
             <div class="card-footer">
+                <?php 
+                    if($_SESSION['usertype']=='admin' ||  $_SESSION['usertype']=='user'){
+                ?>
                 <button class="btn btn-edit">
                     <a style="color:white; text-decoration:none;" href="edit_product.php?id=<?php echo $row['product_id']; ?>">Edit</a>
                 </button>
-                <button class="btn btn-delete">
-                    <a style="color:white; text-decoration:none;" href="delete_product.php?id=<?php echo $row['product_id']; ?>">Delete</a>
-                </button>
+
                 <button class="btn btn-buy">
                     <a style="color:white; text-decoration:none; " href="buy_course.php?id=<?php echo $row['product_id']; ?>">Buy</a>
                 </button>
+
+                <button class="btn btn-delete">
+                    <a style="color:white; text-decoration:none;" href="delete_product.php?id=<?php echo $row['product_id']; ?>">Delete</a>
+                </button>
+
+                <?php
+                    }
+                ?>
+              
                 <button class="btn btn-cart">
                     <form action="insert-cart-data.php" method="POST">
                         <label>Quantity: </label>

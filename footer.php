@@ -4,7 +4,7 @@
 	 footer{
 /*	 	background-color:  saddlebrown;*/
 margin-top: 50px;
-background: #3e1d71; /* A complementary dark purple */
+background:  linear-gradient(135deg,rgb(19, 27, 92),rgb(152, 40, 75));
 color: #ffffff; /* White text for readability */
 
 	 	padding: 20px 0;

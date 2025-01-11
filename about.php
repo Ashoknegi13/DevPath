@@ -31,10 +31,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
             padding-left: 0;
         }
 
-        li {
-            font-size: 1.1em;
-            
-        }
+        
 
         .container {
 			background:  linear-gradient(135deg, #1d2671, #c33764);

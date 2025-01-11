@@ -116,9 +116,10 @@ if ($result) {
         if ($product_id == 1) {
             echo "<a href='https://drive.google.com/file/d/1RNeiThz1FHUJBvCFV_2rVQ3bEmD7ZMyk/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download Web Development Course</a>";
         } elseif ($product_id == 2) {
-            echo "<a href='https://drive.google.com/file/d/1RS8sVjuaRQY9qGmfd03qJUK1ON6rfsZR/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download Java Course</a>";
-        } elseif ($product_id == 3) {
             echo "<a href='https://drive.google.com/file/d/1RS8sVjuaRQY9qGmfd03qJUK1ON6rfsZR/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download C language Course</a>";
+           
+        } elseif ($product_id == 3) {
+            echo "<a href='https://drive.google.com/file/d/1RQf4UeDwgWqQoHDl-cfXHnlxG9SMoy07/view' class='btn' target='_blank' id='downloadBtn'>Download Java Course</a>";
         } elseif ($product_id == 4) {
             echo "<a href='https://drive.google.com/file/d/1RXEbyVW8HM4cRsc_Ti6n1gOLL61Ofoss/view?download=1' class='btn' target='_blank' id='downloadBtn'>Download PHP Course</a>";
         } else {

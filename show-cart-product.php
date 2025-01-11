@@ -17,7 +17,7 @@
 			font-size: 15PX;
 		}
 		#modal{
-		 background:  TAN; 
+	background:  linear-gradient(135deg, #1d2671, #c33764);
 		 position: fixed;
 		 margin-left:52%;
 		 margin-top:65px;
@@ -175,9 +175,10 @@
  					 	success : function(data){
  					 		if(data==1){
  					 			$(element).closest("tr").fadeOut(1000);
- 					 		}else{
-
- 					 		}
+								  $('#successmessage').html("DELETE").slideDown().css('background-color','red').css('color','white');
+								  $('#errormessage').slideUp();
+ 					 		} $('#successmessage').slideUp(3000);
+							  $('#errormessage').slideUp(3000);
  					 	}
  					 });
 

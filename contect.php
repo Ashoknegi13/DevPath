@@ -2,6 +2,7 @@
 include 'bg_color.php';
 session_start();
 if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SESSION['usertype'] == "normal") {
+     include 'nav.php';  
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 			background:  linear-gradient(135deg, #1d2671, #c33764);
 			color : #fff;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+           
             margin: 0;
             padding: 0;
       
@@ -60,11 +61,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
             padding-left: 20px;
         }
 
-        li {
-			
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
+        
 
         .contact-info {
             display: grid;
@@ -80,13 +77,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
+ 
 		a{
 			 
 			color : #fff;
@@ -95,7 +86,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 </head>
 
 <body>
-    <?php include 'nav.php'; ?>
+  
  
 
     <section id="contact">
@@ -114,7 +105,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
                 </div>
                 <div>
                     <h3>Email</h3>
-                    <p><a href="mailto:negiashok132@gmail.com">negiashok132@gmail.com</a></p>
+                    <p><a href="mailto:negiashok1540@gmail.com">negiashok1540@gmail.com</a></p>
                 </div>
                 <div>
                     <h3>Instagram</h3>

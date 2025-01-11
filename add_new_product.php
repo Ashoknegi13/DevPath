@@ -62,7 +62,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 
 				<tr>
 					<td><label for="">Course Discription :</label></td>
-					<td><textarea type="text" placeholder="Discription" name="course_discription" required
+					<td><textarea   placeholder="Discription" name="course_discription" required
 							style="padding: 5px; border-radius: 40PX;"> </textarea></td>
 				</tr>
 
@@ -108,7 +108,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user") {
 
 				<tr>
 					<td><label for="">Course Meterials :</label></td>
-					<td><textarea type="text" placeholder="course Meterials" name="course_meterials" required
+					<td><textarea   placeholder="course Meterials" name="course_meterials" required
 							style="padding: 5px;border-radius: 40PX;"></textarea></td>
 				</tr>
 
