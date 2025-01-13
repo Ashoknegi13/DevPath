@@ -4,13 +4,19 @@ include("nav.php");
 if ($_SESSION['usertype'] == "admin") {
 	?>
 
-	<html>
-
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Edit Product</title>
 	<head>
 		<style>
 			body{
 				font-family: arial;
 				color : #fff;
+				padding:0px;
+				margin:0px;
 			}
 			#box {
 				background:  linear-gradient(135deg, #1d2671, #c33764);
@@ -25,9 +31,15 @@ if ($_SESSION['usertype'] == "admin") {
 
 			#box input {
 				border-radius: 50px;
-				margin: 5px;
+				margin: 30px;
 				padding: 14px;
+				width: 70%;
 
+
+			}
+			textarea{
+				margin: 30px;
+				width: 90px%;
 			}
 
 			h1,
@@ -166,13 +178,19 @@ if ($_SESSION['usertype'] == "admin") {
 elseif ($_SESSION['usertype'] == "user") {
 	?>
 
-	<html>
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Edit Product</title>
+ 
 
 	<head>
 		<style>
 			body{
 				font-family: arial;
-				background-image: url('upload-image/2.jpg');
+				background-image: url('u	pload-image/2.jpg');
 		    	background-size: cover;
 				color : #fff;
 			}
@@ -187,14 +205,18 @@ elseif ($_SESSION['usertype'] == "user") {
 				border-radius: 50px;
 				height: 600px;
 			}
-
 			#box input {
 				border-radius: 50px;
-				margin: 5px;
+				margin: 30px;
 				padding: 14px;
+				width: 70%;
+
 
 			}
-
+			textarea{
+				margin: 30px;
+				width: 90px%;
+			}
 			h1,
 			h2,
 			h3 {
@@ -320,7 +342,7 @@ elseif ($_SESSION['usertype'] == "user") {
 	header("Location: getdata.php");
 } else {
 	session_destroy();
-	header("Location: signup.php");
+	header("Location: index.php");
 }
 include 'footer.php';
 ?>

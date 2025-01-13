@@ -221,7 +221,7 @@
         }
         else{
         	session_destroy();
-        	header("Location: signup.php");
+        	header("Location: index.php");
         }
 
         include'footer.php';

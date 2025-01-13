@@ -95,6 +95,6 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 
 <?php
 } else {
-    header("Location: signup.php");
+    header("Location: index.php");
 }
 ?>

@@ -1,6 +1,8 @@
+<?php
  
+if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SESSION['usertype'] == "normal") {
 
-
+?>
 <style>
     
         .container {
@@ -136,3 +138,8 @@
     </div>
 </body>
  
+<?php
+}else{
+    header("Location: index.php");
+}
+?>

@@ -207,7 +207,7 @@ if($_SESSION['usertype']=="admin" || $_SESSION['usertype']=="user" || $_SESSION[
 <?php
 	include'footer.php';
 }else{
-	header("Location: signup.php");
+	header("Location: index.php");
 }
 ?>
 

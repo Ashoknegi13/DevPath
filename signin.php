@@ -1,5 +1,5 @@
 <?php
-include 'nav.php';
+include 'nav.php'; 
 
 ?>
 <html>
@@ -13,7 +13,7 @@ include 'nav.php';
 			font-family: arial;
 			color : #fff;
 
-		}
+		} 
 
 		#box {
 			background:  linear-gradient(135deg, #1d2671, #c33764);
@@ -56,7 +56,7 @@ include 'nav.php';
 	<h2 style="font-size:50px"><u>"Your Path to Success Begins Here- Log In Now."</u> </h2>
 
 	<h2 style="color: red;">!! Access Portal !!</h2>
-	<form action="welcome.php" method="POST" autocomplete="off">
+	<form action="signin.php" method="POST" autocomplete="off">
 		<div align="center">
 			<table id="box">
 				<tr>
@@ -81,8 +81,8 @@ include 'nav.php';
 		</div>
 	</form>
 
-	<h3 style="color:white;">Dont't Have any account Press <b> --> </b><button
-			style="background:cyan; border-radius: 20px;width: 90px;height: 40px;"><a href="signup.php"
+	<h3 style="color:white;">New User ? <b> --> </b><button
+			style="background:cyan; border-radius: 20px;width: 90px;height: 40px;"><a href="index.php"
 				style="text-decoration:none; color:black;">Sign Up</a></button></h3>
 
 </body>

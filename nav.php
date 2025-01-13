@@ -60,7 +60,7 @@
 							<button style="background:blue;margin-left:910px;border-radius:20px"><a href="show-cart-product.php">Show cart Product</a></button>
 					 			';
 		} else {
-			echo '<li><a href="signup.php"> | Register </a></li>
+			echo '<li><a href="index.php"> | Register </a></li>
 							<li><a  href="logout.php">|  Login</a><li>
 							       ';
 		}

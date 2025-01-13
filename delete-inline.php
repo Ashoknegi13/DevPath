@@ -17,7 +17,7 @@ elseif($_SESSION['usertype']=="user"  ||  $_SESSION['usertype']=="normal" ){
      header("Location: getdata.php");
 }else{
 	session_destroy();
-	header("Location: signup.php");
+	header("Location: index.php");
 }
 
 ?>

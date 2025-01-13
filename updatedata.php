@@ -34,7 +34,7 @@ mysqli_close($conn);
 }elseif($_SESSION['usertype']=="normal"){
 	header("Location: getdata.php");
 }else{
-	header("Location: signup.php");
+	header("Location: index.php");
 }					
 ?>
 

@@ -789,7 +789,7 @@
 	<?php
   }
   else{
-  	header("Location: signup.php");
+  	header("Location: index.php");
   }
   include('footer.php');
 	?>

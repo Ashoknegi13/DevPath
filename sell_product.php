@@ -381,7 +381,7 @@
    }      // this is the end of  user details
 	else{
 		session_destroy();
-		header("Location: signup.php");
+		header("Location: index.php");
 	}
 
 

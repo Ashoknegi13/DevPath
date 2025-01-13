@@ -106,7 +106,7 @@ if ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user" || $_SES
 	<?php
 } else {
 	session_destroy();
-	header("Location: signup.php");
+	header("Location: index.php");
 }
 
 if (isset($_POST['add_cart_btn'])) {

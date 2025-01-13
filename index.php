@@ -36,7 +36,7 @@
 	    $result = mysqli_query($conn,$sql) or die("query failed");
 	       if($result){
 		        move_uploaded_file($file_tmp,$folder);
-		        header("Location: 	welcome.php");
+		        header("Location: 	signin.php");
 	      	}else {
 		       echo "Data is not submitted";
 		        }
@@ -171,8 +171,8 @@
 		</div>
 	 		
 
-		<h3 style="color:white">If you are already register please click hear and <div align="center"><br>
-			 <button style="background:green;border-radius:50px;width: 300px;height:40px;"><a style="color:white; text-decoration:none;" href="welcome.php" >Login hear</a></button>
+		<h3 style="color:white"> Already Sign in ? <div align="center"><br>
+			 <button style="background:green;border-radius:50px;width: 300px;height:40px;"><a style="color:white; text-decoration:none;" href="signin.php" >Login hear</a></button>
 			</div>
   </h3>
 				<h2 style="color:white"><li>Why Choose Us?</li></h2>
