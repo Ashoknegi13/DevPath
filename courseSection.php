@@ -95,23 +95,28 @@
                 </p>
             </div>
             <div class="card-footer">
-                <?php 
-                    if($_SESSION['usertype']=='admin' ||  $_SESSION['usertype']=='user'){
-                ?>
-                <button class="btn btn-edit">
-                    <a style="color:white; text-decoration:none;" href="edit_product.php?id=<?php echo $row['product_id']; ?>">Edit</a>
-                </button>
-
+                
                 <button class="btn btn-buy">
                     <a style="color:white; text-decoration:none; " href="buy_course.php?id=<?php echo $row['product_id']; ?>">Buy</a>
                 </button>
 
-                <button class="btn btn-delete">
+                <?php 
+                    if($_SESSION['usertype']=='admin' ||  $_SESSION['usertype']=='user'){   
+                ?>
+                <button class="btn btn-edit">
+                    <a style="color:white; text-decoration:none;" href="edit_product.php?id=<?php echo $row['product_id']; ?>">Edit</a>
+                </button>
+                
+                <?php 
+                  if($_SESSION['usertype']=='admin'){
+                 ?>
+                    <button class="btn btn-delete">
                     <a style="color:white; text-decoration:none;" href="delete_product.php?id=<?php echo $row['product_id']; ?>">Delete</a>
                 </button>
 
                 <?php
-                    }
+                  }
+              }
                 ?>
               
                 <button class="btn btn-cart">

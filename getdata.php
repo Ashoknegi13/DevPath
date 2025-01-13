@@ -218,7 +218,7 @@
 					echo ' </ul><br><br>';
 				}
 		
-				include'chatgpt.php';
+				include'courseSection.php';
 		?>
 		 		
 
@@ -485,7 +485,7 @@
 		
 				 
 			<?php
-				include'chatgpt.php';
+				include'courseSection.php'; // include course section
 			?> 
 
 
@@ -729,7 +729,7 @@
  
 		<br><br> 
 		<?php
-				include'chatgpt.php';
+					include'courseSection.php'; // include course section
 			?> 
 
 			<br> </table><br><hr>
