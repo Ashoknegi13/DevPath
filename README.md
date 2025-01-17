@@ -70,7 +70,7 @@ Welcome to **DevPath**, an online platform designed to simplify learning program
 5. Start the local server and access the platform at:
  http://localhost/DevPath/signup.php  (also access this page first because index.php file does't exit in this projects )
 
-6. Screenshots .
+6. Screenshots Without using Chatgpt  .
    (i)-> Register Page --> 
 ![Screenshot 2025-01-07 131703](https://github.com/user-attachments/assets/cfaa175d-8aa6-456c-a1a1-433b32ab6f8b)
 
@@ -82,6 +82,12 @@ Welcome to **DevPath**, an online platform designed to simplify learning program
 
 (iv)-> Profile Page-->
 ![Screenshot 2025-01-07 131823](https://github.com/user-attachments/assets/2b29ff5e-3592-4aad-ac05-4c35387aa4de)
+
+
+
+7 . Screenshots using Chatgpt .
+
+
 
 7. Contributing .
   Contributions are welcome! To contribute: 
