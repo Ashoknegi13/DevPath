@@ -41,7 +41,7 @@ Welcome to **DevPath**, an online platform designed to simplify learning program
 - **Frontend**: HTML, CSS,  jQuery
 - **Backend**: PHP
 - **Database**: MySQL (managed with phpMyAdmin)
-- **APIs**: AJAX for dynamic content updates.
+- **APIs**: AJAX for dynamic content updates and Rozorpay api for payment getway(testing purpose).
 
 ---
 
@@ -85,7 +85,12 @@ Welcome to **DevPath**, an online platform designed to simplify learning program
 
 
 
-7 . Screenshots using Chatgpt .
+7 . Screenshots after using Chatgpt for improve the design .
+ 
+ ![Screenshot 2025-01-08 031041](https://github.com/user-attachments/assets/e6fa5e2d-97d4-47f2-876e-a2c2a5526b2c)
+
+
+
 
 
 
