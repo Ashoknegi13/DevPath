@@ -208,10 +208,10 @@
   					type : "POST",
   					data : {search : search_term},
   					success : function(data){
-  							$("#unique-data").html(data);
-  							$('#unique-data').slideUp();	 
+  							$("#unique-data").html(data);	 
   					}
   			});
+			  
   		});
 
 
@@ -226,7 +226,7 @@
   					data : {search : search_term},
   					success : function(data){
   							$("#unique-data").html(data);
-  							$('#unique-data').slideUp();	 
+  						 	 
   					}
   			});
   		});
@@ -243,10 +243,11 @@
   					data : {search : search_term},
   					success : function(data){
   							$("#unique-data").html(data);
-  							$('#unique-data').slideUp();	 
+  							 
   					}
   			});
   		});
+			$('#unique-data').slideUp();
 
 	}); // script 
 

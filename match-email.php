@@ -3,7 +3,7 @@ session_start();
 $search_value = $_POST['search'];
 
 $conn = mysqli_connect("localhost","root","","user") or die("connection failed");
-$sql = "SELECT * FROM  userdata WHERE  email LIKE '%{$search_value}%'   ";
+$sql = "SELECT * FROM  userdata WHERE  email = '{$search_value}'   ";
 $result = mysqli_query($conn,$sql) or die("query failed");
 $output = "";
 if(mysqli_num_rows($result)>0){
