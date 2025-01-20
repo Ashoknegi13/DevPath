@@ -78,7 +78,8 @@ Welcome to **DevPath**, an online platform designed to simplify learning program
 ![Screenshot 2025-01-07 131720](https://github.com/user-attachments/assets/1c9c427a-17a5-488c-87a8-83c2f07a4d94)
 
 (iii)-> Home page -->
-![Screenshot 2025-01-07 131749](https://github.com/user-attachments/assets/cd0f6b86-12f0-4195-9073-01fa041504d5)
+ ![Screenshot 2025-01-20 172354](https://github.com/user-attachments/assets/241a1dc6-373d-4360-8b7d-1cdc0e6fbd34)
+
 
 (iv)-> Profile Page-->
 ![Screenshot 2025-01-07 131823](https://github.com/user-attachments/assets/2b29ff5e-3592-4aad-ac05-4c35387aa4de)
