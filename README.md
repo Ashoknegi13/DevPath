@@ -102,7 +102,7 @@ Welcome to **DevPath**, an online platform designed to simplify learning program
 
 8. Contact
   If you have any questions, feel free to reach out:
-  Email: negiashok1540@gmaile.com
+  Email: negiashok1540@gmail.com
 
  
 
